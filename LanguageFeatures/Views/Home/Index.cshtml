@@ -1,7 +1,24 @@
-﻿
+﻿@model IEnumerable<string>
 @{
+    Layout = null;
     ViewData["Title"] = "Index";
 }
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+    <ul>
+        @foreach(string s in Model)
+        {
+            <li>
+                @s
+            </li>
 
-<h2>Index</h2>
+        }
+    </ul>
+</body>
+</html>
+
 
