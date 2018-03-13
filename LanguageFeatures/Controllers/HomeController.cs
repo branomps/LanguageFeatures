@@ -8,9 +8,9 @@ namespace LanguageFeatures.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        public ViewResult Index()
         {
-            return View();
+            return View(new string[] { "C#", "Language", "Features"});
         }
     }
 }
