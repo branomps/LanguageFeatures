@@ -9,6 +9,7 @@ namespace LanguageFeatures.Models
     {
         public string Name { get; set; }
         public decimal? Price { get; set; }
+        public string Category { get; set; } = "Watersports";
         public Product Related { get; set; }
 
 
@@ -17,6 +18,7 @@ namespace LanguageFeatures.Models
             Product kayak = new Product
             {
                 Name = "Kayak",
+                Category = "Water Craft",
                 Price = 275M
             };
 
