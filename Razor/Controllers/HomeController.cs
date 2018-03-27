@@ -11,6 +11,7 @@ namespace Razor.Controllers
     {
         public ViewResult Index()
         {
+            ViewBag.StockLevel = 2;
             Product myProduct = new Product()
             {
                 ProductID = 1,
