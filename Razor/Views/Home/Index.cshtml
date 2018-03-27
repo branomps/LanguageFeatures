@@ -2,8 +2,9 @@
 @{
     ViewData["Title"] = "Product.Name";
 }
-
+<div data-productid="@Model.ProductID" data-stocklevel="@ViewBag.StockLevel">
    <p> Product Name: @Model.Name </p>
 <br />
   <p>  Product Price @($"{Model.Price:C2}")</p>
   <p>  Product Stock @ViewBag.StockLevel </p>
+</div>
