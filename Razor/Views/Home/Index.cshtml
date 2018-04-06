@@ -6,5 +6,20 @@
    <p> Product Name: @Model.Name </p>
 <br />
   <p>  Product Price @($"{Model.Price:C2}")</p>
-  <p>  Product Stock @ViewBag.StockLevel </p>
+  <p>  Product Stock
+    @switch (ViewBag.StockLevel)
+    {
+        case 0:
+            @: Out of stock
+            break;
+        case 1:
+        case 2:
+        case 3:
+            <b>Low stock (@ViewBag.StockLevel)</b>
+            break;
+        default:
+            @: @ViewBag.StockLevel in Stock
+        break;
+    }
+  </p>
 </div>
