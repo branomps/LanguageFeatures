@@ -7,19 +7,18 @@
 <br />
   <p>  Product Price @($"{Model.Price:C2}")</p>
   <p>  Product Stock
-    @switch (ViewBag.StockLevel)
+    @if(ViewBag.StockLevel == 0)
     {
-        case 0:
-            @: Out of stock
-            break;
-        case 1:
-        case 2:
-        case 3:
-            <b>Low stock (@ViewBag.StockLevel)</b>
-            break;
-        default:
-            @: @ViewBag.StockLevel in Stock
-        break;
+        @: Out of Stock
     }
+    else if (ViewBag.StockLevel > 0 && ViewBag.StockLevel <= 3)
+    {
+        <b>Low Level (@ViewBag.StockLevel)</b>
+    }
+    else
+    {
+        @: @ViewBag.StockLevel in stock
+    }
+
   </p>
 </div>
