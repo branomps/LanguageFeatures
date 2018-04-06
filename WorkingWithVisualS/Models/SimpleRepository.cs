@@ -8,7 +8,7 @@ namespace WorkingWithVisualS.Models
     public class SimpleRepository
     {
         private static SimpleRepository sharedRepository = new SimpleRepository();
-        private Dictionary<string, Product> products = new Dictionary<string, Product>();
+        private Dictionary<string, Product> product = new Dictionary<string, Product>();
 
         public static SimpleRepository SharedRepository => sharedRepository;
 
@@ -21,14 +21,7 @@ namespace WorkingWithVisualS.Models
                 new Product {Name ="Soccer ball", Price = 19.50M},
                 new Product {Name ="Corner flag" , Price = 34.95M},
                 new Product {Name ="Soccer Web", Price = 20M}
-            };
-
-            foreach (var p in initialItems)
-            {
-                AddProduct(p);
             }
         }
-        public IEnumerable<Product> Products => products.Values;
-        public void AddProduct(Product p) => products.Add(p.Name, p);
     }
 }
