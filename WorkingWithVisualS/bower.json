@@ -1,5 +1,6 @@
 {
   "name": "asp.net",
+  "private": true,
   "dependencies": {
     "jQuery": "*",
     "popper.js": "1.14.3",

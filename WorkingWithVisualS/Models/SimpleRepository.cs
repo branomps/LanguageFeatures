@@ -22,6 +22,13 @@ namespace WorkingWithVisualS.Models
                 new Product {Name ="Corner flag" , Price = 34.95M},
                 new Product {Name ="Soccer Web", Price = 20M}
             };
+            foreach (var p in initialItems)
+            {
+                AddProduct(p);
+            }
         }
+        public IEnumerable<Product> Products => product.Values;
+
+        public void AddProduct(Product p) => product.Add(p.Name, p);
     }
 }
