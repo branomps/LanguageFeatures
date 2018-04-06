@@ -1,0 +1,8 @@
+{
+  "name": "asp.net",
+  "dependencies": {
+    "jQuery": "*",
+    "popper.js": "1.14.3",
+    "bootstrap": "*"
+  }
+}

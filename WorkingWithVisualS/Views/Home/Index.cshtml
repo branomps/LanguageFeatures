@@ -1,0 +1,41 @@
+﻿@model IEnumerable<WorkingWithVisualS.Models.Product>
+@{ 
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Working with Visual Studio</title>
+
+
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <h3>ahoj </h3>
+    <div class="alert alert-primary">
+        this is allert
+    </div>
+    <table>
+        <thead>
+            <tr><th>Name</th><th>Price</th></tr>
+        </thead>
+        <tbody>
+            @foreach (var p in Model)
+            {
+                <tr>
+                    <td>@p.Name</td>
+                    <td>@($"{p.Price:C2}")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+
+    <script src="~/lib/jQuery/dist/jquery.js"></script>
+    <script src="~/lib/popper.js/dist/popper.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+   </body>
+</html>
