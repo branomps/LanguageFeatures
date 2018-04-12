@@ -1,0 +1,10 @@
+﻿h3 {
+    font-size:18pt;
+    font-family:sans-serif;
+    color:aquamarine;
+}
+
+table, td{
+    color:cornflowerblue;
+    padding: 5px;
+}
